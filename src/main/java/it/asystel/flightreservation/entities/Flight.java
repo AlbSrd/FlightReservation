@@ -1,15 +1,17 @@
 package it.asystel.flightreservation.entities;
 
+import javax.persistence.Entity;
 import java.sql.Timestamp;
 import java.util.Date;
 
-public class Flight {
-    private Long id;
+@Entity
+public class Flight extends AbstractEntity {
+
     private String flightNumber;
     private String operatingAirlines;
-    private String departueCity;
+    private String departureCity;
     private String arrivalCity;
-    private Date dateOfDepartue;
+    private Date dateOfDeparture;
     private Timestamp estimatedDepartureTime;
 
     public String getFlightNumber() {
@@ -28,12 +30,12 @@ public class Flight {
         this.operatingAirlines = operatingAirlines;
     }
 
-    public String getDepartueCity() {
-        return departueCity;
+    public String getDepartureCity() {
+        return departureCity;
     }
 
-    public void setDepartueCity(String departueCity) {
-        this.departueCity = departueCity;
+    public void setDepartureCity(String departueCity) {
+        this.departureCity = departueCity;
     }
 
     public String getArrivalCity() {
@@ -44,12 +46,12 @@ public class Flight {
         this.arrivalCity = arrivalCity;
     }
 
-    public Date getDateOfDepartue() {
-        return dateOfDepartue;
+    public Date getDateOfDeparture() {
+        return dateOfDeparture;
     }
 
-    public void setDateOfDepartue(Date dateOfDepartue) {
-        this.dateOfDepartue = dateOfDepartue;
+    public void setDateOfDeparture(Date dateOfDepartue) {
+        this.dateOfDeparture = dateOfDepartue;
     }
 
     public Timestamp getEstimatedDepartureTime() {

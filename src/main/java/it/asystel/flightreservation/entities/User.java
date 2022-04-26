@@ -1,7 +1,10 @@
 package it.asystel.flightreservation.entities;
 
-public class User {
-    private Long id;
+import javax.persistence.Entity;
+
+@Entity
+public class User extends AbstractEntity {
+
     private String firstName;
     private String lastName;
     private String email;

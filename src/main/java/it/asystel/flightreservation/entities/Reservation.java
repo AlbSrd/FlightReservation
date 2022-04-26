@@ -1,11 +1,14 @@
 package it.asystel.flightreservation.entities;
 
-public class Reservation {
+import javax.persistence.OneToOne;
 
-    private Long id;
+public class Reservation extends AbstractEntity {
+
     private Boolean checkedIn;
     private int numberOfBags;
+    @OneToOne
     private Passenger passenger;
+    @OneToOne
     private Flight flight;
 
     public Boolean getCheckedIn() {
